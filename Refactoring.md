@@ -10,16 +10,16 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 ## Your Explanation Here
 
-Removed unnecessary nesting: The original code had excessive nesting with multiple if statements. I simplified it by removing some of the nesting to improve readability.
+- Removed unnecessary nesting: The original code had excessive nesting with multiple if statements. I simplified it by removing some of the nesting to improve readability.
 
-Utilized optional chaining: I used optional chaining (?.) when assigning the candidate variable to event.partitionKey. This helps avoid nested if statements and provides a concise way to check for the existence of event.partitionKey.
+- Utilized optional chaining: I used optional chaining (?.) when assigning the candidate variable to event.partitionKey. This helps avoid nested if statements and provides a concise way to check for the existence of event.partitionKey.
 
-Removed TRIVIAL_PARTITION_KEY constant because it's only used once in the code and can be directly assigned to the candidate if event.partitionKey is undefined.
+- Removed TRIVIAL_PARTITION_KEY constant because it's only used once in the code and can be directly assigned to the candidate if event.partitionKey is undefined.
 
-Consistent data type handling: Instead of checking the candidate data type twice, I moved the check to a single location. This ensures that the candidate is always a string or gets converted to a string using JSON.stringify().
+- Consistent data type handling: Instead of checking the candidate data type twice, I moved the check to a single location. This ensures that the candidate is always a string or gets converted to a string using JSON.stringify().
 
-Reordered the conditions: I reordered the conditions in a logical manner to avoid unnecessary checks. If candidate is already defined, there's no need to check its length before proceeding to other conditions.
+- Reordered the conditions: I reordered the conditions in a logical manner to avoid unnecessary checks. If candidate is already defined, there's no need to check its length before proceeding to other conditions.
 
-Refactored `createHash` into a function because the same logic is used in multiple places.
+- Refactored `createHash` into a function because the same logic is used in multiple places.
 
-Improved code comments: Adding descriptive comments at appropriate places to further enhance code readability, especially for complex logic.
+- Added code comments: Adding descriptive comments at appropriate places to further enhance code readability, especially for complex logic.
